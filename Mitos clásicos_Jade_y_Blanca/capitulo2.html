@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="media/iconocap2.png" type="image/x-icon">
+    <title>Mi propia historia</title>
+    <link rel = "stylesheet"
+        type = "text/css"
+        href = "capitulo2css.css" />
+    <script type="text/javascript"
+         src = "javascript.js">
+    </script>
+</head> 
+  
+<body>
+    <h1>CREA TU PROPIA HISTORIA</h1>
+    <audio id="musicaFondo" loop preload="auto">
+    <source src="media/musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+</audio>
+    <p><span style="font-size: 50%;">Rellena o elige:</span></p>
+    <form action="">
+         <fieldset>
+            <label for = "txtAmigo">Nombre de chico</label>
+            <input type = "text" class="enfocado"
+                id = "txtAmigo" autofocus />
+
+            <label for = "txtAños">Número</label>
+            <input type = "text" class="enfocado"
+                id = "txtAños" />
+
+            <label for = "txtProfesion">Profesión</label>
+            <input type = "text" class="enfocado"
+                id = "txtProfesion" />
+
+            <label for = "txtColor">Color</label>
+            <input type = "text" class="enfocado"
+                id = "txtColor" />
+
+            <label for = "txtTamaño">Tamaño</label>
+            <select id="txtTamaño" name="elige" class="enfocado">
+                <option value="enorme">enorme</option>
+                <option value="grande">grande</option>
+                <option value="mediano">mediano</option>
+                <option value="pequeño">pequeño</option>
+             </select>
+            
+            <label for = "txtLugar">Lugar</label>
+            <select id="txtLugar" name="elige" class="enfocado">
+                <option value="playa">playa</option>
+                <option value="montaña">montaña</option>
+                <option value="pradera">pradera</option>
+             </select>
+
+            <label for = "txtObjeto">Objeto</label>
+            <select id="txtObjeto" name="elige" class="enfocado">
+                <option value="arco">arco</option>
+                <option value="escudo">escudo</option>
+                <option value="casco">casco</option>
+             </select>
+                
+            <button onclick = "tellStory(); reproducirMusica();" id="btnContar"type = "button">
+                Contar historia
+
+        </fieldset>
+    </form>
+
+<img id="imagenHover" src="media/imagen1.jpg" alt="Imagen de una cueva vacía" width="280" height="175" style="margin-top: 5px;">
+<script>
+    const imagen = document.getElementById('imagenHover');
+        imagen.addEventListener('mouseover', function() {
+        this.src = 'media/imagen2.png'; alt="Imagen de una cueva con riquezas";width="280"; height="175";
+    });
+        imagen.addEventListener('mouseout', function() {
+        this.src = 'media/imagen1.jpg';alt="Imagen de una cueva vacía"; width="280"; height="175";
+    });
+
+</script>
+
+    <div id = "output">
+    </div>
+    <button onclick = "borrar()"
+        type = "button" class = "boton2">
+        Borrar historia
+    </button>
+
+    <p style="display: flex; justify-content: space-between; margin-top: 50px; margin-left: 100px; margin-right: 100px;">
+            <a href="pagina6.html" class="boton_volver">Pulsa para volver atrás</a>
+            <a href="INDEX.html" class="boton">Pulsa para ir al inicio</a>
+    </p>
+</body>

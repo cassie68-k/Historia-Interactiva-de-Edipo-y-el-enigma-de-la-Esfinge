@@ -1,0 +1,67 @@
+body
+{
+    background-image: url("media/fondo1.jpg") ;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+    font-size: 10pt;
+    font-family: Playfair_Display;
+    margin-left: 1in;
+    margin-right: 1in;
+    opacity: 0;
+    animation: fadein 1.5s forwards;
+}
+
+@keyframes fadein {
+    to { opacity: 1; }
+}
+
+@font-face {
+  font-family: Playfair_Display;
+  src: url(fuente.ttf);
+}
+
+img 
+{
+    margin: 10px;
+}
+
+p {
+	text-align:center;
+	color:rgb(0, 0, 0);
+    line-height: 1.2;
+    font-size: 35pt;
+}
+
+h1 {
+	text-align:center;
+	color:rgb(255, 0, 0);
+    font-size: 50pt;
+    font-weight:bold;
+}
+
+.cambio {
+    content: url("media/edipo.png");
+    transition: 0.3s;
+}
+
+.cambio:hover {
+    content: url("media/edipoHurra.png"); 
+}
+
+a.inicio {
+    display: inline-block;
+    background-color: #ffd700;
+    color: #000;
+    font-size: 1.2em; 
+    padding: 3px 10px;  
+    border-radius: 8px; 
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+a.inicio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffd700;
+}
